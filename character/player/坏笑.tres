@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://8dq6vi0ugom7"]
+
+[ext_resource type="Texture2D" uid="uid://ticwr73jwq7i" path="res://character/player/坏笑.png" id="1_teqj1"]
+
+[resource]
+atlas = ExtResource("1_teqj1")
+region = Rect2(800, 393, 1032, 1032)

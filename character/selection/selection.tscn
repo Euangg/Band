@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://b7038ockrl6g7"]
+
+[ext_resource type="PackedScene" uid="uid://crmgtcni7t7o" path="res://character/selection/button.tscn" id="1_n4qx2"]
+[ext_resource type="Script" uid="uid://bjllnj7pl7k23" path="res://character/selection/selection.gd" id="1_pmyms"]
+[ext_resource type="Texture2D" uid="uid://dpfto7xber7ll" path="res://character/selection/s2_common.tres" id="2_lbpcx"]
+[ext_resource type="Texture2D" uid="uid://bodkfh0jn7ttr" path="res://character/selection/s2_hover.tres" id="3_pmyms"]
+
+[node name="Selection" type="Control" unique_id=1914730288]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pmyms")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1390721716]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -339.5
+offset_top = -128.0
+offset_right = 339.5
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" parent="VBoxContainer" unique_id=1316443708 instance=ExtResource("1_n4qx2")]
+layout_mode = 2
+
+[node name="Button2" parent="VBoxContainer" unique_id=2068386072 instance=ExtResource("1_n4qx2")]
+layout_mode = 2
+texture_normal = ExtResource("2_lbpcx")
+texture_hover = ExtResource("3_pmyms")
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]

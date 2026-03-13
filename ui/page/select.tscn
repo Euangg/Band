@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c3jau2vtdsvmd"]
+
+[ext_resource type="Texture2D" uid="uid://dgwt5o2sm1vc" path="res://ui/page/存档页面选择.png" id="1_vd7fc"]
+
+[node name="Select" type="Control" unique_id=548215724]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1079014958]
+layout_mode = 1
+offset_right = 4724.0
+offset_bottom = 2657.0
+texture = ExtResource("1_vd7fc")

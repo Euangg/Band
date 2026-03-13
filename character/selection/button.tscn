@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://crmgtcni7t7o"]
+
+[ext_resource type="Texture2D" uid="uid://8ixui6xncyh0" path="res://character/selection/s1_common.tres" id="1_ndvem"]
+[ext_resource type="Texture2D" uid="uid://b4aomnfvka4h8" path="res://character/selection/s1_hover.tres" id="2_0onaw"]
+[ext_resource type="Script" uid="uid://diq4u8kxloaaf" path="res://ui/button/button.gd" id="3_qc7kq"]
+
+[node name="Button" type="TextureButton" unique_id=1316443708]
+custom_minimum_size = Vector2(800, 126)
+offset_right = 800.0
+offset_bottom = 126.0
+pivot_offset = Vector2(400, 63)
+texture_normal = ExtResource("1_ndvem")
+texture_hover = ExtResource("2_0onaw")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_qc7kq")
+
+[node name="Label" type="Label" parent="." unique_id=1938824794]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 42
+text = "你好阿三大苏打"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="button_up" from="." to="." method="_on_button_up"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

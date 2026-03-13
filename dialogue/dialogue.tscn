@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cj7nbq71lmta7"]
+
+[ext_resource type="Script" uid="uid://dcpmu5q4nh3o3" path="res://dialogue/dialogue.gd" id="1_k0ki1"]
+[ext_resource type="PackedScene" uid="uid://byhmitc7o2dx4" path="res://character/荆子君/cha_荆子君.tscn" id="2_tmwax"]
+[ext_resource type="PackedScene" uid="uid://bfurkejffm7n8" path="res://character/林一言/cha_林一言.tscn" id="3_8y0mt"]
+[ext_resource type="PackedScene" uid="uid://blly3lyip6onq" path="res://character/陈继为/cha_陈继为.tscn" id="4_ru11m"]
+[ext_resource type="PackedScene" uid="uid://dum256vwpxrcg" path="res://character/程晓依/cha_程晓依.tscn" id="5_8y0mt"]
+[ext_resource type="Texture2D" uid="uid://cefqrn3lbnvs4" path="res://dialogue/bottom.png" id="6_ru11m"]
+
+[node name="Dialogue" type="Control" unique_id=8248747]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k0ki1")
+
+[node name="JinZiJun" parent="." unique_id=245623975 instance=ExtResource("2_tmwax")]
+visible = false
+layout_mode = 1
+
+[node name="LinYiYan" parent="." unique_id=2047286502 instance=ExtResource("3_8y0mt")]
+visible = false
+layout_mode = 1
+
+[node name="ChenJiWei" parent="." unique_id=1184356119 instance=ExtResource("4_ru11m")]
+visible = false
+layout_mode = 1
+
+[node name="ChengXiaoYi" parent="." unique_id=514801864 instance=ExtResource("5_8y0mt")]
+visible = false
+layout_mode = 1
+
+[node name="FrameBottom" type="TextureRect" parent="." unique_id=48395915]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_ru11m")
+expand_mode = 1

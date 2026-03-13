@@ -1,0 +1,233 @@
+[gd_scene format=3 uid="uid://byhmitc7o2dx4"]
+
+[ext_resource type="Script" uid="uid://bx8giyksh0v3j" path="res://character/character.gd" id="1_3578k"]
+[ext_resource type="Texture2D" uid="uid://bgic7hwt3juuq" path="res://character/荆子君/IMG_0437.png" id="1_ayb0t"]
+[ext_resource type="Texture2D" uid="uid://bs4rmdgjclwpo" path="res://character/tttttt-export.png" id="1_jclig"]
+[ext_resource type="Texture2D" uid="uid://brxl81bc6h2tt" path="res://character/5·1.png" id="4_mp41u"]
+[ext_resource type="Texture2D" uid="uid://8njhoqj4u3qm" path="res://character/5.png" id="5_ed5wj"]
+
+[sub_resource type="Animation" id="Animation_5wtkp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphic/Character:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-306, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jclig"]
+resource_name = "l"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphic/Character:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-676, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_3578k"]
+resource_name = "m"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphic/Character:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-306, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5gig3"]
+resource_name = "r"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphic/Character:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(41, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mp41u"]
+_data = {
+&"RESET": SubResource("Animation_5wtkp"),
+&"l": SubResource("Animation_jclig"),
+&"m": SubResource("Animation_3578k"),
+&"r": SubResource("Animation_5gig3")
+}
+
+[sub_resource type="Animation" id="Animation_cqqbh"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jtct0"]
+_data = {
+&"RESET": SubResource("Animation_cqqbh")
+}
+
+[sub_resource type="Animation" id="Animation_8trud"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphic/Decoration:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_mp41u")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Graphic/Decoration:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_ldf5n"]
+resource_name = "说话"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphic/Decoration:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_mp41u")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Graphic/Decoration:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_aohdr"]
+resource_name = "问号感叹号"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphic/Decoration:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_ed5wj")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Graphic/Decoration:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jojj8"]
+_data = {
+&"RESET": SubResource("Animation_8trud"),
+&"说话": SubResource("Animation_ldf5n"),
+&"问号感叹号": SubResource("Animation_aohdr")
+}
+
+[node name="JinZiJun" type="Control" unique_id=245623975]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3578k")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=934126087]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_jclig")
+expand_mode = 1
+
+[node name="Graphic" type="Control" parent="." unique_id=896316790]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Character" type="TextureRect" parent="Graphic" unique_id=1335889919]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -306.0
+offset_right = -306.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ayb0t")
+expand_mode = 1
+
+[node name="Decoration" type="TextureRect" parent="Graphic" unique_id=521263283]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_mp41u")
+expand_mode = 1
+
+[node name="AnimationPlayerPos" type="AnimationPlayer" parent="." unique_id=1273790587]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_mp41u")
+
+[node name="AnimationPlayerFace" type="AnimationPlayer" parent="." unique_id=539369145]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_jtct0")
+
+[node name="AnimationPlayerDecoration" type="AnimationPlayer" parent="." unique_id=1619306337]
+libraries/ = SubResource("AnimationLibrary_jojj8")

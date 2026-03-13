@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://3e51a5r0goe1"]
+
+[ext_resource type="Texture2D" uid="uid://1gdpbyxlfo02" path="res://ui/save/bottom.png" id="1_ow440"]
+[ext_resource type="Texture2D" uid="uid://c1a2k5wrl3mm2" path="res://ui/save/frame.png" id="2_y25iw"]
+
+[node name="Save" type="TextureRect" unique_id=1662292994]
+custom_minimum_size = Vector2(434, 308.8)
+offset_right = 434.0
+offset_bottom = 308.8
+pivot_offset = Vector2(217, 154)
+texture = ExtResource("1_ow440")
+expand_mode = 1
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1100012954]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("2_y25iw")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Screenshot" type="TextureRect" parent="TextureButton" unique_id=154836620]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1

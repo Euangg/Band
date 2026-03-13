@@ -1,0 +1,168 @@
+[gd_scene format=3 uid="uid://bkjlnu3m0x0h8"]
+
+[ext_resource type="Script" uid="uid://dwfn7wi7qqo5f" path="res://ui/play/play.gd" id="1_0paom"]
+[ext_resource type="Texture2D" uid="uid://cu5qf4r6o4anc" path="res://test/0.png" id="1_8a8pi"]
+[ext_resource type="Texture2D" uid="uid://br38idfro0g72" path="res://test/1.png" id="1_syuel"]
+[ext_resource type="PackedScene" uid="uid://ctbg6sberp32r" path="res://test/star.tscn" id="2_vvaop"]
+[ext_resource type="Texture2D" uid="uid://8u08o5y5npxq" path="res://test/2.png" id="3_65205"]
+[ext_resource type="Texture2D" uid="uid://btn64yhii1d6j" path="res://ui/play/IMG_0518.png" id="3_vnlc8"]
+[ext_resource type="Texture2D" uid="uid://dsvt3l4t54hgr" path="res://ui/play/cloud.tres" id="4_ninmy"]
+[ext_resource type="Texture2D" uid="uid://bf5ixbyy3188f" path="res://test/4.png" id="6_s3n3v"]
+[ext_resource type="PackedScene" uid="uid://sicigygh73cl" path="res://test/button/button.tscn" id="7_ibfm0"]
+[ext_resource type="Texture2D" uid="uid://cb3ss75r1n813" path="res://test/history_normal.tres" id="8_f6u32"]
+[ext_resource type="Texture2D" uid="uid://cwjhdotah042x" path="res://test/history_hover.tres" id="9_5jhup"]
+[ext_resource type="Texture2D" uid="uid://crlljx3wtg0dh" path="res://test/auto_normal.tres" id="10_ibfm0"]
+[ext_resource type="Texture2D" uid="uid://do4160gtx8lxl" path="res://test/auto_hover.tres" id="11_joax2"]
+[ext_resource type="Texture2D" uid="uid://ca0uut3vbgnth" path="res://test/acc_normal.tres" id="12_hictm"]
+[ext_resource type="Texture2D" uid="uid://dcqghkg4g7yaq" path="res://test/acc_hover.tres" id="13_kr6cc"]
+[ext_resource type="PackedScene" uid="uid://cj7nbq71lmta7" path="res://dialogue/dialogue.tscn" id="14_a4i24"]
+[ext_resource type="PackedScene" uid="uid://bfrksl5hw51b0" path="res://ui/pause.tscn" id="15_ix372"]
+
+[node name="Play" type="Control" unique_id=1683909278]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0paom")
+
+[node name="Sky" type="TextureRect" parent="." unique_id=1871197548]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_8a8pi")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="Sky" unique_id=8349376]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_vnlc8")
+expand_mode = 1
+
+[node name="Parallax2D" type="Parallax2D" parent="Sky" unique_id=377002604]
+unique_name_in_owner = true
+scroll_offset = Vector2(3352, 0)
+repeat_size = Vector2(1460.41, 0)
+autoscroll = Vector2(10, 0)
+
+[node name="Cloud" type="Sprite2D" parent="Sky/Parallax2D" unique_id=187764853]
+position = Vector2(992.82007, 315)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_ninmy")
+
+[node name="Star" parent="." unique_id=899060317 instance=ExtResource("2_vvaop")]
+visible = false
+position = Vector2(704, 305)
+
+[node name="Star2" parent="." unique_id=104688984 instance=ExtResource("2_vvaop")]
+visible = false
+position = Vector2(887, 291)
+
+[node name="Star3" parent="." unique_id=138412977 instance=ExtResource("2_vvaop")]
+visible = false
+position = Vector2(898, 380)
+
+[node name="Star4" parent="." unique_id=1874836358 instance=ExtResource("2_vvaop")]
+visible = false
+position = Vector2(1121, 285)
+
+[node name="Star5" parent="." unique_id=1419709496 instance=ExtResource("2_vvaop")]
+visible = false
+position = Vector2(1191, 413)
+
+[node name="Star6" parent="." unique_id=278674492 instance=ExtResource("2_vvaop")]
+visible = false
+position = Vector2(1086, 431)
+
+[node name="Star7" parent="." unique_id=1412568165 instance=ExtResource("2_vvaop")]
+visible = false
+position = Vector2(749, 396)
+
+[node name="Room" type="TextureRect" parent="." unique_id=1532670650]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_syuel")
+expand_mode = 1
+
+[node name="Frame" type="TextureRect" parent="." unique_id=52600667]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_65205")
+expand_mode = 1
+
+[node name="FrameBottom" type="TextureRect" parent="." unique_id=165386922]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_s3n3v")
+expand_mode = 1
+
+[node name="Dialogue" parent="." unique_id=8248747 instance=ExtResource("14_a4i24")]
+layout_mode = 1
+
+[node name="UI" type="Control" parent="." unique_id=1090737499]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI" unique_id=603034278]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 418.0
+offset_right = 141.0
+offset_bottom = 622.0
+mouse_filter = 2
+theme_override_constants/separation = 1629
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/HBoxContainer" unique_id=1650620525]
+layout_mode = 2
+
+[node name="TextureButton" parent="UI/HBoxContainer/VBoxContainer" unique_id=1614888115 instance=ExtResource("7_ibfm0")]
+layout_mode = 2
+
+[node name="TextureButton2" parent="UI/HBoxContainer/VBoxContainer" unique_id=1602690141 instance=ExtResource("7_ibfm0")]
+layout_mode = 2
+texture_normal = ExtResource("8_f6u32")
+texture_hover = ExtResource("9_5jhup")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="UI/HBoxContainer" unique_id=1741074674]
+layout_mode = 2
+
+[node name="TextureButton" parent="UI/HBoxContainer/VBoxContainer2" unique_id=662169461 instance=ExtResource("7_ibfm0")]
+layout_mode = 2
+texture_normal = ExtResource("12_hictm")
+texture_hover = ExtResource("13_kr6cc")
+
+[node name="TextureButton2" parent="UI/HBoxContainer/VBoxContainer2" unique_id=1629260005 instance=ExtResource("7_ibfm0")]
+layout_mode = 2
+texture_normal = ExtResource("10_ibfm0")
+texture_hover = ExtResource("11_joax2")
+
+[node name="Pause" parent="." unique_id=1514557878 instance=ExtResource("15_ix372")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1

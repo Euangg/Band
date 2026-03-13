@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://x6o0a4a5fent"]
+
+[ext_resource type="PackedScene" uid="uid://b7038ockrl6g7" path="res://character/selection/selection.tscn" id="1_qpbeq"]
+
+[node name="Selection" unique_id=1914730288 instance=ExtResource("1_qpbeq")]
+
+[node name="Label" parent="VBoxContainer/Button" parent_id_path=PackedInt32Array(1316443708) index="0" unique_id=1938824794]
+text = "笑死我了"
+
+[node name="Label" parent="VBoxContainer/Button2" parent_id_path=PackedInt32Array(2068386072) index="0" unique_id=1938824794]
+text = "这么说过分了点吧"
+
+[editable path="VBoxContainer/Button"]
+[editable path="VBoxContainer/Button2"]

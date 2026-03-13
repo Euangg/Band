@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://bpxp83s5snfpw"]
+
+[ext_resource type="Texture2D" uid="uid://dbawbpvcv7r52" path="res://character/fishpatty/fishpatty.png" id="1_h8xwv"]
+
+[sub_resource type="Animation" id="Animation_cmwj8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_t5v4g"]
+resource_name = "round"
+length = 2.0
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -3.1415927, -6.283185307179586]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_043uk"]
+_data = {
+&"RESET": SubResource("Animation_cmwj8"),
+&"round": SubResource("Animation_t5v4g")
+}
+
+[node name="FishPlate" type="Node2D" unique_id=1080726727]
+
+[node name="Fishpatty" type="Sprite2D" parent="." unique_id=724901883]
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("1_h8xwv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1421317429]
+libraries/ = SubResource("AnimationLibrary_043uk")
+autoplay = &"round"

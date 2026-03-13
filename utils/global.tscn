@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cb1quhd6th7gd"]
+
+[ext_resource type="Script" uid="uid://b25lsktma7s44" path="res://utils/global.gd" id="1_o7gr7"]
+
+[node name="Global" type="Node" unique_id=761600141]
+script = ExtResource("1_o7gr7")
+
+[node name="Bgm" type="AudioStreamPlayer" parent="." unique_id=646957603]
+unique_name_in_owner = true
+volume_db = -15.0
+
+[node name="Sfx" type="Node" parent="." unique_id=1402469646]
+unique_name_in_owner = true
+
+[connection signal="finished" from="Bgm" to="." method="_on_bgm_finished"]

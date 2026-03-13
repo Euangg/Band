@@ -1,0 +1,14 @@
+Control
+TextureRect
+AnimationPlayer
+Parallax2D
+Label
+VBoxContainer
+TextureButton
+Sprite2D
+GridContainer
+Container
+Button
+BoxContainer
+ColorRect
+TextureProgressBar

@@ -1,0 +1,342 @@
+[gd_scene format=3 uid="uid://dum256vwpxrcg"]
+
+[ext_resource type="Texture2D" uid="uid://cmp5tjjhjyuie" path="res://character/程晓依/IMG_0384.png" id="1_gic1e"]
+[ext_resource type="Script" uid="uid://bx8giyksh0v3j" path="res://character/character.gd" id="1_vnxu0"]
+[ext_resource type="Texture2D" uid="uid://bs4rmdgjclwpo" path="res://character/tttttt-export.png" id="1_x5465"]
+[ext_resource type="Texture2D" uid="uid://ibie4rh4o55e" path="res://character/程晓依/IMG_0529.png" id="3_2khem"]
+[ext_resource type="Texture2D" uid="uid://brxl81bc6h2tt" path="res://character/5·1.png" id="3_jgobs"]
+[ext_resource type="Texture2D" uid="uid://camruhuxrw1oo" path="res://character/程晓依/IMG_0528.png" id="4_jgobs"]
+[ext_resource type="Texture2D" uid="uid://8njhoqj4u3qm" path="res://character/5.png" id="6_6p1d2"]
+
+[sub_resource type="Animation" id="Animation_4feuk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphic:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_x5465"]
+resource_name = "l"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphic:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-361, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hiump"]
+resource_name = "m"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphic:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_2khem"]
+resource_name = "r"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphic:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(359, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jgobs"]
+_data = {
+&"RESET": SubResource("Animation_4feuk"),
+&"l": SubResource("Animation_x5465"),
+&"m": SubResource("Animation_hiump"),
+&"r": SubResource("Animation_2khem")
+}
+
+[sub_resource type="Animation" id="Animation_cqqbh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphic/Character:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_gic1e")]
+}
+
+[sub_resource type="Animation" id="Animation_vnxu0"]
+resource_name = "捂嘴流汗"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphic/Character:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_jgobs")]
+}
+
+[sub_resource type="Animation" id="Animation_6p1d2"]
+resource_name = "捂嘴说话"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphic/Character:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_2khem")]
+}
+
+[sub_resource type="Animation" id="Animation_jgobs"]
+resource_name = "闭嘴害羞"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphic/Character:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_gic1e")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jtct0"]
+_data = {
+&"RESET": SubResource("Animation_cqqbh"),
+&"捂嘴流汗": SubResource("Animation_vnxu0"),
+&"捂嘴说话": SubResource("Animation_6p1d2"),
+&"闭嘴害羞": SubResource("Animation_jgobs")
+}
+
+[sub_resource type="Animation" id="Animation_8trud"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphic/Decoration:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_jgobs")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Graphic/Decoration:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Graphic/Decoration:pivot_offset")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1084, 155)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Graphic/Decoration:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.2, 0.2)]
+}
+
+[sub_resource type="Animation" id="Animation_ldf5n"]
+resource_name = "说话"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphic/Decoration:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_jgobs")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Graphic/Decoration:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Graphic/Decoration:pivot_offset")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1084, 155)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Graphic/Decoration:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.2, 0.2), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_aohdr"]
+resource_name = "问号感叹号"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphic/Decoration:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_6p1d2")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Graphic/Decoration:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_aohdr"]
+_data = {
+&"RESET": SubResource("Animation_8trud"),
+&"说话": SubResource("Animation_ldf5n"),
+&"问号感叹号": SubResource("Animation_aohdr")
+}
+
+[node name="程晓依" type="Control" unique_id=245623975]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vnxu0")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1182065945]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x5465")
+expand_mode = 1
+
+[node name="Graphic" type="Control" parent="." unique_id=896316790]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Character" type="TextureRect" parent="Graphic" unique_id=1335889919]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_gic1e")
+expand_mode = 1
+
+[node name="Decoration" type="TextureRect" parent="Graphic" unique_id=907503956]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+pivot_offset = Vector2(1084, 155)
+texture = ExtResource("3_jgobs")
+expand_mode = 1
+
+[node name="AnimationPlayerPos" type="AnimationPlayer" parent="." unique_id=1249627100]
+libraries/ = SubResource("AnimationLibrary_jgobs")
+
+[node name="AnimationPlayerFace" type="AnimationPlayer" parent="." unique_id=539369145]
+libraries/ = SubResource("AnimationLibrary_jtct0")
+
+[node name="AnimationPlayerDecoration" type="AnimationPlayer" parent="." unique_id=497264046]
+libraries/ = SubResource("AnimationLibrary_aohdr")

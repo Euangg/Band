@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://mtnni4lr3c0v"]
+
+[ext_resource type="Script" uid="uid://bplhpy1e3qenk" path="res://character/dia.gd" id="1_7bxb8"]
+[ext_resource type="Texture2D" uid="uid://bqvti0d3q35hn" path="res://character/荆子君/荆mid.png" id="2_7bxb8"]
+[ext_resource type="PackedScene" uid="uid://bpxp83s5snfpw" path="res://character/fishpatty/fishpatty.tscn" id="3_tx4gd"]
+[ext_resource type="Texture2D" uid="uid://b8sfutflg1b6h" path="res://character/荆子君/荆l.png" id="4_qbnsl"]
+[ext_resource type="Texture2D" uid="uid://dy44ly4f2durc" path="res://character/荆子君/荆r.png" id="5_vl5o5"]
+
+[sub_resource type="Animation" id="Animation_ddbf6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_7bxb8")]
+}
+
+[sub_resource type="Animation" id="Animation_4lt13"]
+resource_name = "l"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_qbnsl")]
+}
+
+[sub_resource type="Animation" id="Animation_462n4"]
+resource_name = "m"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_7bxb8")]
+}
+
+[sub_resource type="Animation" id="Animation_rbmvq"]
+resource_name = "r"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_vl5o5")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wcf23"]
+_data = {
+&"RESET": SubResource("Animation_ddbf6"),
+&"l": SubResource("Animation_4lt13"),
+&"m": SubResource("Animation_462n4"),
+&"r": SubResource("Animation_rbmvq")
+}
+
+[node name="荆子君" type="Control" unique_id=1010070671]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7bxb8")
+
+[node name="Background" type="TextureRect" parent="." unique_id=377340513]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_7bxb8")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=1553108884]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 447.0
+offset_top = 819.0
+offset_right = 1579.0
+offset_bottom = 1029.0
+theme_override_colors/font_color = Color(0.30588236, 0.29803923, 0.29411766, 1)
+theme_override_font_sizes/font_size = 44
+text = "sadasdasdsa das"
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters_behavior = 1
+
+[node name="FishPlate" parent="." unique_id=1080726727 instance=ExtResource("3_tx4gd")]
+position = Vector2(1648, 932)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2060014352]
+libraries/ = SubResource("AnimationLibrary_wcf23")

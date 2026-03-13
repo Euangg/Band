@@ -1,0 +1,141 @@
+[gd_scene format=3 uid="uid://bo1y6d1dfawxa"]
+
+[ext_resource type="Script" uid="uid://bplhpy1e3qenk" path="res://character/dia.gd" id="1_t6ndl"]
+[ext_resource type="Texture2D" uid="uid://dcy8aj5jm8cer" path="res://character/player/微笑.tres" id="2_dojyb"]
+[ext_resource type="Texture2D" uid="uid://8dq6vi0ugom7" path="res://character/player/坏笑.tres" id="2_jgj7o"]
+[ext_resource type="Texture2D" uid="uid://b4mpluvt6b53h" path="res://character/player/IMG_0265.png" id="3_7p2ai"]
+[ext_resource type="Texture2D" uid="uid://b2qwftnk8n2x4" path="res://character/player/严肃.tres" id="4_r3vsw"]
+[ext_resource type="Texture2D" uid="uid://clafap0586idl" path="res://character/player/无语.tres" id="6_oam1t"]
+[ext_resource type="PackedScene" uid="uid://bpxp83s5snfpw" path="res://character/fishpatty/fishpatty.tscn" id="7_jr2sp"]
+
+[sub_resource type="Animation" id="Animation_oam1t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HeadPic:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_jgj7o")]
+}
+
+[sub_resource type="Animation" id="Animation_jr2sp"]
+resource_name = "严肃"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HeadPic:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_r3vsw")]
+}
+
+[sub_resource type="Animation" id="Animation_npl8b"]
+resource_name = "坏笑"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HeadPic:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_jgj7o")]
+}
+
+[sub_resource type="Animation" id="Animation_f0arx"]
+resource_name = "微笑"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HeadPic:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_dojyb")]
+}
+
+[sub_resource type="Animation" id="Animation_3pcvo"]
+resource_name = "无语"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HeadPic:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_oam1t")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3pcvo"]
+_data = {
+&"RESET": SubResource("Animation_oam1t"),
+&"严肃": SubResource("Animation_jr2sp"),
+&"坏笑": SubResource("Animation_npl8b"),
+&"微笑": SubResource("Animation_f0arx"),
+&"无语": SubResource("Animation_3pcvo")
+}
+
+[node name="Player" type="Control" unique_id=856442623]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t6ndl")
+
+[node name="HeadPic" type="TextureRect" parent="." unique_id=248902720]
+layout_mode = 0
+offset_left = 101.0
+offset_top = 758.0
+offset_right = 401.0
+offset_bottom = 1058.0
+texture = ExtResource("2_jgj7o")
+expand_mode = 1
+
+[node name="Background" type="TextureRect" parent="." unique_id=248996311]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_7p2ai")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=751338101]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 447.0
+offset_top = 819.0
+offset_right = 1579.0
+offset_bottom = 1029.0
+theme_override_colors/font_color = Color(0.30588236, 0.29803923, 0.29411766, 1)
+theme_override_font_sizes/font_size = 44
+text = "sadasdasdsa das"
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters_behavior = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=829030406]
+libraries/ = SubResource("AnimationLibrary_3pcvo")
+
+[node name="FishPlate" parent="." unique_id=1080726727 instance=ExtResource("7_jr2sp")]
+position = Vector2(1648, 932)
