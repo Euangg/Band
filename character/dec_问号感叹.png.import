@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brxl81bc6h2tt"
-path="res://.godot/imported/5·1.png-877ec554068426ff223fb71b5699f17c.ctex"
+uid="uid://8njhoqj4u3qm"
+path="res://.godot/imported/dec_问号感叹.png-1948dd5590da33089e36f94568c819f1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://character/5·1.png"
-dest_files=["res://.godot/imported/5·1.png-877ec554068426ff223fb71b5699f17c.ctex"]
+source_file="res://character/dec_问号感叹.png"
+dest_files=["res://.godot/imported/dec_问号感叹.png-1948dd5590da33089e36f94568c819f1.ctex"]
 
 [params]
 

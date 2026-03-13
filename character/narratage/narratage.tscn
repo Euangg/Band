@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://btfcmqtv05irh"]
 
 [ext_resource type="Script" uid="uid://bplhpy1e3qenk" path="res://character/dia.gd" id="1_j5vsu"]
-[ext_resource type="Texture2D" uid="uid://cefqrn3lbnvs4" path="res://dialogue/bottom.png" id="1_m3wao"]
+[ext_resource type="Texture2D" uid="uid://cefqrn3lbnvs4" path="res://event/bottom.png" id="1_m3wao"]
 
 [node name="Narratage" type="Control" unique_id=1646589681]
 layout_mode = 3

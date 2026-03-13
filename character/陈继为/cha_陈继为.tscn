@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://cb4hldix2sum6" path="res://character/陈继为/IMG_0475.png" id="1_8phms"]
 [ext_resource type="Script" uid="uid://bx8giyksh0v3j" path="res://character/character.gd" id="1_ootfp"]
 [ext_resource type="Texture2D" uid="uid://bs4rmdgjclwpo" path="res://character/tttttt-export.png" id="2_a83m0"]
-[ext_resource type="Texture2D" uid="uid://brxl81bc6h2tt" path="res://character/5·1.png" id="4_s5uge"]
-[ext_resource type="Texture2D" uid="uid://8njhoqj4u3qm" path="res://character/5.png" id="5_f2any"]
+[ext_resource type="Texture2D" uid="uid://brxl81bc6h2tt" path="res://character/dec_说话.png" id="4_s5uge"]
+[ext_resource type="Texture2D" uid="uid://8njhoqj4u3qm" path="res://character/dec_问号感叹.png" id="5_f2any"]
 
 [sub_resource type="Animation" id="Animation_8phms"]
 length = 0.001
@@ -170,6 +170,92 @@ _data = {
 &"问号感叹号": SubResource("Animation_aohdr")
 }
 
+[sub_resource type="Animation" id="Animation_wj3np"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphic:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_o3qwo"]
+resource_name = "fade_hide"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphic:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_53yhh"]
+resource_name = "fade_show"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphic:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_md7ps"]
+resource_name = "hide"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphic:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_160lc"]
+resource_name = "show"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphic:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b14og"]
+_data = {
+&"RESET": SubResource("Animation_wj3np"),
+&"fade_hide": SubResource("Animation_o3qwo"),
+&"fade_show": SubResource("Animation_53yhh"),
+&"hide": SubResource("Animation_md7ps"),
+&"show": SubResource("Animation_160lc")
+}
+
 [node name="陈继为" type="Control" unique_id=245623975]
 layout_mode = 3
 anchors_preset = 15
@@ -229,3 +315,6 @@ libraries/ = SubResource("AnimationLibrary_jtct0")
 
 [node name="AnimationPlayerDecoration" type="AnimationPlayer" parent="." unique_id=1817298306]
 libraries/ = SubResource("AnimationLibrary_tql6g")
+
+[node name="AnimationPlayerEntrance" type="AnimationPlayer" parent="." unique_id=184076789]
+libraries/ = SubResource("AnimationLibrary_b14og")
