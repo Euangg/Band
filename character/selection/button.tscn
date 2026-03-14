@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://8ixui6xncyh0" path="res://character/selection/s1_common.tres" id="1_ndvem"]
 [ext_resource type="Texture2D" uid="uid://b4aomnfvka4h8" path="res://character/selection/s1_hover.tres" id="2_0onaw"]
-[ext_resource type="Script" uid="uid://diq4u8kxloaaf" path="res://ui/button/button.gd" id="3_qc7kq"]
+[ext_resource type="Script" uid="uid://diq4u8kxloaaf" path="res://ui/button/settings/button.gd" id="3_qc7kq"]
 
 [node name="Button" type="TextureButton" unique_id=1316443708]
 custom_minimum_size = Vector2(800, 126)

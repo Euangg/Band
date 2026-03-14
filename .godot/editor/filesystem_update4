@@ -1,2 +1,9 @@
-res://dialogue/dialogue.tscn
-res://dialogue/dialogue.gd
+res://utils/global.gd
+res://ui/play/play.tscn
+res://ui/play/play.gd
+res://ui/button/button.tscn
+res://test/button/button.tscn
+res://character/selection/button.tscn
+res://ui/button/settings/button.gd
+res://character/陈继为/cha_陈继为.tscn
+res://ui/button/game/button.gd

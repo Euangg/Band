@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bfrksl5hw51b0"]
 
-[ext_resource type="PackedScene" uid="uid://brhjchcnrgwpw" path="res://ui/button/button.tscn" id="1_5awou"]
-[ext_resource type="Texture2D" uid="uid://dgawqdytgum7n" path="res://ui/button/b2_normal.tres" id="2_wn0le"]
-[ext_resource type="Texture2D" uid="uid://o1ndeeus5w8h" path="res://ui/button/b2_hover.tres" id="3_foqgb"]
-[ext_resource type="Texture2D" uid="uid://dat0vjljkrv5o" path="res://ui/button/b3_normal.tres" id="4_iri2v"]
-[ext_resource type="Texture2D" uid="uid://cxt2y422jc8s2" path="res://ui/button/b3_hover.tres" id="5_ltsnx"]
+[ext_resource type="PackedScene" uid="uid://brhjchcnrgwpw" path="res://ui/button/settings/button.tscn" id="1_5awou"]
+[ext_resource type="Texture2D" uid="uid://dgawqdytgum7n" path="res://ui/button/settings/b2_normal.tres" id="2_wn0le"]
+[ext_resource type="Texture2D" uid="uid://o1ndeeus5w8h" path="res://ui/button/settings/b2_hover.tres" id="3_foqgb"]
+[ext_resource type="Texture2D" uid="uid://dat0vjljkrv5o" path="res://ui/button/settings/b3_normal.tres" id="4_iri2v"]
+[ext_resource type="Texture2D" uid="uid://cxt2y422jc8s2" path="res://ui/button/settings/b3_hover.tres" id="5_ltsnx"]
 [ext_resource type="PackedScene" uid="uid://3e51a5r0goe1" path="res://ui/save/save.tscn" id="6_ltsnx"]
 
 [node name="Pause" type="Control" unique_id=1514557878]

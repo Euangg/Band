@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://sicigygh73cl"]
+
+[ext_resource type="Texture2D" uid="uid://djvm3t1y2ba5r" path="res://ui/button/game/save_normal.tres" id="1_168m2"]
+[ext_resource type="Texture2D" uid="uid://rn63wtuvryny" path="res://ui/button/game/save_hover.tres" id="2_qm52c"]
+[ext_resource type="Script" uid="uid://dal7u4r383m7d" path="res://ui/button/game/button.gd" id="3_qm52c"]
+
+[node name="TextureButton" type="TextureButton" unique_id=1614888115]
+custom_minimum_size = Vector2(100, 100)
+offset_right = 100.0
+offset_bottom = 100.0
+pivot_offset = Vector2(50, 50)
+texture_normal = ExtResource("1_168m2")
+texture_hover = ExtResource("2_qm52c")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_qm52c")
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="button_up" from="." to="." method="_on_button_up"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

@@ -1,7 +1,0 @@
-[gd_resource type="AtlasTexture" format=3 uid="uid://do4160gtx8lxl"]
-
-[ext_resource type="Texture2D" uid="uid://bpffwouompo4k" path="res://test/auto_hover.png" id="1_584hs"]
-
-[resource]
-atlas = ExtResource("1_584hs")
-region = Rect2(4307, 639, 240, 262)

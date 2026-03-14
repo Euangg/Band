@@ -1,7 +1,0 @@
-[gd_resource type="AtlasTexture" format=3 uid="uid://njluu0415xba"]
-
-[ext_resource type="Texture2D" uid="uid://ckil3lqi0wgr0" path="res://ui/button/b1_hover.png" id="1_2cyh6"]
-
-[resource]
-atlas = ExtResource("1_2cyh6")
-region = Rect2(85, 438, 772, 279)

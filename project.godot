@@ -8,6 +8,10 @@
 
 config_version=5
 
+[Fmod]
+
+General/banks_path="res://sound/banks"
+
 [application]
 
 config/name="Text"
@@ -18,6 +22,7 @@ config/icon="uid://87iplnv4u2vo"
 [autoload]
 
 Global="*uid://cb1quhd6th7gd"
+FmodManager="*uid://cds10pm7hwn3p"
 
 [display]
 
@@ -29,6 +34,10 @@ window/size/window_height_override=900
 window/stretch/mode="viewport"
 window/stretch/aspect="ignore"
 mouse_cursor/custom_image="uid://cnr3cttydu187"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/fmod/plugin.cfg")
 
 [gui]
 

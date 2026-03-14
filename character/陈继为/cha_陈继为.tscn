@@ -306,11 +306,9 @@ texture = ExtResource("4_s5uge")
 expand_mode = 1
 
 [node name="AnimationPlayerPos" type="AnimationPlayer" parent="." unique_id=1021382879]
-unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_f2any")
 
 [node name="AnimationPlayerFace" type="AnimationPlayer" parent="." unique_id=539369145]
-unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_jtct0")
 
 [node name="AnimationPlayerDecoration" type="AnimationPlayer" parent="." unique_id=1817298306]
